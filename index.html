@@ -1,128 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>skool</title>
-        <link rel="icon" href="storage/images/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
-                background-color: #000;
-                color: #fff;
-                font-family: Arial, Helvetica, sans-serif;
                 text-align: center;
             }
-            a {
-                color: #fff;
-                transition: 0.3s ease;
-                text-decoration: none;
-            }
-            a:hover {
-                color: #ddd;
-            }
-            iframe {
-                width: 100%;
-                height: 100%;
-                border: none;
-                margin: 0;
-                background-color: #fff;
-                
-            }
-            .embedcontainer {
-                width: 70%;
-                height: calc(70vh - 16px);
-                margin: 0;
-                background-color: #fff;
-            }
-            button {
-                display: inline-block;
-                padding: 10px 20px;
-                background-color: #0f0f0f;
-                color: #ffffff;
-                border-radius: 20px;
-                border: none;
-                text-align: center;
-                text-decoration: none;
-                transition: 0.3s ease;
-            }
-            button:hover {
-                background-color: #1f1f1f;
-            }
-            button:focus {
-                outline: none;
+            hr {
+                width: 8rem;
             }
         </style>
-        <script>
-            function changegame(url) {
-                var embed = document.getElementById("game");
-                embed.src = url;
-            }
-            function cloak(option) {
-                var title, favicon;
-                switch (option) {
-                    case 1:
-                        title = "Google";
-                        favicon = "https://www.google.com/favicon.ico";
-                        break;
-                    case 2:
-                        title = "Classes";
-                        favicon = "https://ssl.gstatic.com/classroom/favicon.png";
-                        break;
-                    case 3:
-                        title = "My Drive - Google Drive";
-                        favicon = "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png";
-                        break;
-                    case 4:
-                        title = "skool";
-                        favicon = "storage/images/favicon.ico";
-                        break;
-                }
-
-                document.title = title;
-
-                var link = document.querySelector("link[rel~='icon']");
-                link.href = favicon;
-
-                // Save the cloak data to localStorage
-                localStorage.setItem("cloak", JSON.stringify({ title: title, favicon: favicon }));
-            }
-
-            // Load the cloak data from localStorage
-            function loadcloak() {
-                var cloakData = localStorage.getItem("cloak");
-                if (cloakData) {
-                    var { title, favicon } = JSON.parse(cloakData);
-
-                    document.title = title;
-
-                    var link = document.querySelector("link[rel~='icon']");
-                    link.href = favicon;
-                }
-            }
-
-            // Call the loadcloak function when the page loads
-            window.addEventListener("load", loadcloak);
-        </script>
     </head>
     <body>
-        <h1 style="font-size: 150px;">skool</h1>
-        <div class="embedcontainer">
-            <iframe id="game" src="/storage/games/none.html"></iframe>
-        </div>
-        <h2>games</h2>
-        <button onclick="changegame('/storage/games/minecraft-1.5.2')">minecraft 1.5.2</button>
-        <button onclick="changegame('/storage/games/minecraft-1.8.8')">minecraft 1.8.8</button>
-        <button onclick="changegame('/storage/games/slitherio')">slither.io</button>
-        <button onclick="changegame('/storage/games/chrome-dino')">chrome dino</button>
-        <button onclick="changegame('/storage/games/2048')">2048</button>
-        <button onclick="changegame('/storage/games/wordle')">wordle</button>
-        <button onclick="changegame('/storage/games/google-feud')">google feud</button>
-        <button onclick="changegame('/storage/games/adarkroom')">a dark room</button>
-        <br><br><br><br>
-        <h2>cloaks</h2>
-        <button onclick="cloak(1)">google</button>
-        <button onclick="cloak(2)">google classroom</button>
-        <button onclick="cloak(3)">google drive</button>
-        <button onclick="cloak(4)">none</button>
-        <hr>
-        <p><a href="https://0midnite.repl.co">portfolio</a> • <a href="https://linktr.ee/0midnite">linktree</a></p>
+        <header>
+            <h1>unblocked games</h1>
+            <a href="/storage/games/minecraft-1.5.2">minecraft 1.5.2</a>
+            <br>
+            <a href="/storage/games/minecraft-1.8.8">minecraft 1.8.8</a>
+            <br>
+            <a href="/storage/games/slitherio">slither.io</a>
+            <br>
+            <a href="/storage/games/chrome-dino">chrome dino</a>
+            <br>
+            <a href="/storage/games/2048">2048</a>
+            <br>
+            <a href="/storage/games/wordle">wordle</a>
+            <br>
+            <a href="/storage/games/google-feud">google feud</a>
+            <br>
+            <a href="/storage/games/adarkroom">a dark room</a>
+        </header>
+        <footer>
+            <hr>
+            <a href="https://0midnite.com">my website</a>
+        </footer>
     </body>
 </html>
